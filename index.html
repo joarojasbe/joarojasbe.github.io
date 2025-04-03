@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>child</title>
+    <style>
+        body {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is a title of the child</h1>
+    <button id="changeButton" onclick="changeURL()">Click Me</button>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis
+        maiores quia, nesciunt totam sapiente dignissimos ipsumodit dicta
+        magni ipsa beatae numquam saepe dolor incidunt rem dolorum iure quos
+        fuga?
+    </p>
+
+    <script>
+        function changeURL() {
+            window.parent.postMessage('{ "command": "changeURL", "arguments": "https://example.com/" }', '*');
+        }
+    </script>
+</body>
+</html>
