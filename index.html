@@ -21,7 +21,7 @@
 
     <script>
         function changeURL() {
-            window.parent.postMessage('{ "command": "changeURL", "arguments": "https://example.com/" }', '*');
+            window.parent.postMessage('{ "command": "changeURL", "url": "https://example.com/", "id": "testIFrameCommand" }', '*');
         }
     </script>
 </body>
